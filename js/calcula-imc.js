@@ -1,12 +1,7 @@
-
-// Alteração do título da página
-var titulo = document.querySelector(".titulo");
-titulo.textContent = "Aparecida Nutricionista";
- 
 // Cálculo do IMC do paciente
 var pacientes = document.querySelectorAll(".paciente");
  
-for (let i = 0; i < pacientes.length; i++) {
+for (var i = 0; i < pacientes.length; i++) {
     const paciente = pacientes[i];
     var tdPeso = paciente.querySelector(".info-peso");
     var tdAltura = paciente.querySelector(".info-altura");
@@ -35,10 +30,19 @@ for (let i = 0; i < pacientes.length; i++) {
     }
  
     if (alturaEhValida && pesoEhValido) {
-        var imc = peso / (altura * altura);
-        tdImc.textContent = imc.toFixed(2);
+        var imc = calculaImc(peso, altura);
+        tdImc.textContent = imc;
     }
 }
+ 
+function calculaImc(peso, altura) {
+    var imc = 0;
+    imc = peso / Math.pow(altura, 2);
+    return imc.toFixed(2);
+}
+ 
+ 
+form.js:
  
 var botaoAdicionar = document.querySelector("#adicionar-paciente");
  
@@ -62,7 +66,7 @@ botaoAdicionar.addEventListener("click", function (event) {
     pesoTd.textContent = peso;
     alturaTd.textContent = altura;
     gorduraTd.textContent = gordura;
-    imcTd.textContent = (peso / Math.pow(altura, 2)).toFixed(2);
+    imcTd.textContent = calculaImc(peso, altura);
  
     var pacienteTr = document.createElement("tr");
  
