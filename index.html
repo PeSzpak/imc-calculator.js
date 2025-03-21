@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-br">
- 
+
 <head>
     <meta charset="UTF-8">
     <title>Aparecida Nutrição</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
- 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
 </head>
- 
+
 <body>
- 
+
     <header>
         <div class="container">
             <h1 class="titulo">Aparecida Nutrição</h1>
@@ -28,6 +30,7 @@
                         <th>Altura(m)</th>
                         <th>Gordura Corporal(%)</th>
                         <th>IMC</th>
+                        <th>AÇÕES</th>
                     </tr>
                 </thead>
                 <tbody id="tabela-pacientes">
@@ -37,30 +40,46 @@
                         <td class="info-altura">2.00</td>
                         <td class="info-gordura">10</td>
                         <td class="info-imc">0</td>
+                        <td class="acoes">
+                            <a href="#"><i class="fas fa-marker"></i></a>
+                            <a href="#" id="excluir"><i class="far fa-trash-alt"></i></a>
+                        </td>
                     </tr>
- 
+
                     <tr class="paciente">
                         <td class="info-nome">João</td>
                         <td class="info-peso">80</td>
                         <td class="info-altura">1.72</td>
                         <td class="info-gordura">40</td>
                         <td class="info-imc">0</td>
+                        <td>
+                            <a href="#"><i class="fas fa-marker"></i></a>
+                            <a href="#"><i class="far fa-trash-alt"></i></a>
+                        </td>
                     </tr>
- 
+
                     <tr class="paciente">
                         <td class="info-nome">Erica</td>
                         <td class="info-peso">54</td>
                         <td class="info-altura">1.64</td>
                         <td class="info-gordura">14</td>
                         <td class="info-imc">0</td>
+                        <td>
+                            <a href="#"><i class="fas fa-marker"></i></a>
+                            <a href="#"><i class="far fa-trash-alt"></i></a>
+                        </td>
                     </tr>
- 
+
                     <tr class="paciente">
                         <td class="info-nome">Douglas</td>
                         <td class="info-peso">85</td>
                         <td class="info-altura">1.73</td>
                         <td class="info-gordura">24</td>
                         <td class="info-imc">0</td>
+                        <td>
+                            <a href="#"><i class="fas fa-marker"></i></a>
+                            <a href="#"><i class="far fa-trash-alt"></i></a>
+                        </td>
                     </tr>
                     <tr class="paciente">
                         <td class="info-nome">Tatiana</td>
@@ -68,6 +87,10 @@
                         <td class="info-altura">1.55</td>
                         <td class="info-gordura">19</td>
                         <td class="info-imc">0</td>
+                        <td>
+                            <a href="#"><i class="fas fa-marker"></i></a>
+                            <a href="#"><i class="far fa-trash-alt"></i></a>
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -75,7 +98,7 @@
     </main>
     <section class="container">
         <h2>Adicionar novo paciente</h2>
-		<ul id="msg-erro"></ul>
+        <ul id="msg-erro"></ul>
         <form action="" id="form-adiciona">
             <div class="grupo">
                 <label for="nome">Nome:</label>
@@ -98,10 +121,11 @@
             <button id="adicionar-paciente">Adicionar</button>
         </form>
     </section>
- 
+
     <script src="js/principal.js"></script>
     <script src="js/calcula-imc.js"></script>
     <script src="js/forms.js"></script>
+    <script src="js/remove-paciente.js"></script>
 </body>
- 
+
 </html>

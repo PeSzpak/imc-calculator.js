@@ -132,3 +132,21 @@ button[disabled=disabled], button:disabled {
 .campo-invalido{
 	border: 1px solid red;
 }
+
+.fadeOut{
+	opacity: 0;
+	transition: 0.5s;
+}
+td a {
+	text-decoration: none;
+	color: #333;
+}
+tr a:hover{
+	color: gray;
+}
+.acoes{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 10px;
+}
