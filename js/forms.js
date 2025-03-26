@@ -63,8 +63,7 @@ function montaTr(paciente) {
     pacienteTr.appendChild(montaTd(paciente.altura));
     pacienteTr.appendChild(montaTd(paciente.gordura));
     pacienteTr.appendChild(montaTd(paciente.imc));
-
-    return pacienteTr;
+    //pacienteTr.appendChild(montaTd(paciente))
 }
 
 function validaPaciente(paciente) {
